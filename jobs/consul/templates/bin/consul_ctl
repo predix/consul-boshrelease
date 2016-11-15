@@ -71,7 +71,7 @@ EOF
     ;;
 
   stop)
-    consul leave
+    kill -SIGTERM $(cat $PIDFILE)
     ;;
 
   reload)
