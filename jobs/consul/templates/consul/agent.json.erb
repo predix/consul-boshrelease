@@ -10,13 +10,14 @@
   is_server = p('consul.server', true)
   client_addr = p('consul.client_addr', '0.0.0.0')
   agent_config = p('consul.agent_config', nil)
+  data_dir = p('consul.data_dir')
 
   ssl_ca = p("consul.ssl_ca", nil)
   ssl_cert = p("consul.ssl_cert", nil)
   ssl_key = p("consul.ssl_key", nil)
 
   config = {
-    data_dir: '/var/vcap/store/consul',
+    data_dir: data_dir,
     ui_dir: '/var/vcap/packages/consul-ui',
     node_name: "#{spec.deployment}-#{name}-#{index}",
     bind_addr: '0.0.0.0',

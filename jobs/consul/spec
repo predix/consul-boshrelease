@@ -48,6 +48,10 @@ properties:
     description: If enabled, gracefully leave the cluster when the process shuts down.
     default: false
 
+  consul.data_dir:
+    description: Location for data directory
+    default: /var/vcap/store/consul
+
   consul.agent_config:
     description: override hash for the consul agent.json configuration
 
