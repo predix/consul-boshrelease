@@ -2,5 +2,5 @@
 blobstore:
   provider: s3
   options:
-    bucket_name: ge-consul-boshrelease
+    bucket_name: consul-boshrelease
 final_name: consul
